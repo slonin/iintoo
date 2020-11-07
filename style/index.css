@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Barlow-Regular-webfont.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+    background-color: #EFF6FF;
+    font-family: 'Barlow';
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    box-shadow: 0px 10px 35px 5px #eee;
+}
+
+.bg {
+    background-image: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-basis: 50%;
+    padding: 50px;
+}
+
+.logo {
+    max-width: 140px;
+}
+
+.registration {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 150px 72px;
+    background-color: #fff;
+    flex-basis: 50%;
+}
+
+.title {
+    margin-bottom: 25px;
+    color: #2A4A5C;
+}
+
+.title-descr {
+    margin-bottom: 60px;
+    font-size: 20px;
+    color: #7B8A92;
+}
+
+.button-group {
+    margin-bottom: 54px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-facebook {
+    border: none;
+    color: #fff;
+    background-color: #255A9B;
+    padding: 13px 50px;
+    background-image: url(../img/fb.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+    flex-basis: 47%;
+    font-size: 14px;
+}
+
+.btn-linkedin {
+    border: none;
+    color: #fff;
+    background-color: #0076B6;
+    padding: 13px 50px;
+    background-image: url(../img/linkedin.svg);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    background-size: 20px;
+    flex-basis: 47%;
+    font-size: 14px;
+}
+
+.divide {
+    align-self: center;
+    position: relative;
+    margin-bottom: 49px;
+    font-size: 12px;
+    color: #7B8A92;
+}
+
+.divide::before {
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    left: 30px;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #eee;
+}
+
+.divide::after {
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    right: 30px;
+    content: '';
+    width: 100px;
+    height: 2px;
+    background-color: #eee;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;   
+}
+
+.email,
+.tel {
+    padding-left: 10px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    width: 100%;
+    border: 1px solid #eee;
+    outline: none;
+}
+
+.email {
+    border-top-right-radius: 3px;
+}
+
+.tel {
+    border-bottom-right-radius: 3px;
+}
+
+.email:focus,
+.tel:focus {
+    border-left-color: #3698FB;
+}
+
+.label-email,
+.label-tel {
+    position: relative;
+    flex-basis: 47%;
+}
+
+.label-email::before {
+    position: absolute;
+    content: 'Email';
+    font-size: 12px;
+    color: #afafaf;
+    top: 7px;
+    left: 7px;
+}
+
+.label-tel::before {
+    position: absolute;
+    content: 'Phone';
+    font-size: 12px;
+    color: #afafaf;
+    top: 7px;
+    left: 7px;
+}
+
+.question-text {
+    color: #2A4A5C;
+    margin-bottom: 15px;
+}
+
+.question-descr {
+    color: #7B8A92;
+    margin-bottom: 50px;
+}
+
+.radio-group {
+    margin-bottom: 24px;
+}
+
+.radio:not(:last-child) {
+    margin-right: 10%;
+}
+
+[type="radio"] {
+    margin-right: 10px;
+}
+
+.radio-text {
+    position: relative;
+}
+
+.radio-text::after {
+    position: absolute;
+    content: '\1F6C8';
+    top: -2px;
+    right: -20px;
+    color: grey;
+    font-size: 14px;    
+}
+
+.radio-descr {
+    max-width: 280px;
+    margin-bottom: 48px;
+    padding: 14px;
+    box-shadow: 0px 3px 15px 0px #eee;
+    border-radius: 5px;
+    line-height: 20px;
+    color: #afafaf;
+}
+
+.agreement {
+    color: #afafaf;
+    margin-bottom: 58px;
+    line-height: 20px;
+}
+
+[type="checkbox"] {
+    border: 1px solid #afafaf;
+    margin-right: 6px;
+}
+
+.agreement-link {
+    color: #3698FB;
+}
+
+.btn-submit {
+    border:1px solid #3698FB;
+    align-self: flex-start;
+    background-color: #3698FB;
+    padding: 11px 70px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    transition: all .4s;
+}
+
+.btn-submit:hover {
+    transition: all .4s;
+    background-color: #fff;
+    color: #3698FB;
+}
+
+@media(max-width: 1240px) {
+
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn-facebook {
+        margin-bottom: 30px;
+    }
+
+    .input-group {
+        flex-direction: column;
+    }
+
+    .email {
+        margin-bottom: 30px;
+    }
+
+    .radio-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .radio:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:890px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .registration {
+        padding: 30px;
+    }
+
+    .btn-submit {
+        padding: 10px 30px;
+    }
+
+}
+
+@media(max-width: 653px) {
+
+    .registration {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .fb,
+    .lk {
+        display: none;
+    }
+
+    .btn-facebook,
+    .btn-linkedin {
+        background-position-x: 90%;
+    }
+}
+
+@media(max-width: 545px) {
+    .bg {
+        display: none;
+    }
+
+    .registration {
+        flex-basis: 100%;
+    }
+}
